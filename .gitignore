@@ -6,3 +6,4 @@ build/
 dist/
 *.tmp
 .cache/
+./test_work_cli.sh

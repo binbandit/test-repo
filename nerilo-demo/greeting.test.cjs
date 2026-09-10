@@ -1,5 +1,7 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const { greet } = require('./greeting.cjs');
-test('greets a named person', () => assert.equal(greet('Ada'), 'Hi, Ada'));
 test('rejects non-string names', () => assert.throws(() => greet(42), TypeError));
+test('greets Ada', () => assert.equal(greet('Ada'), 'Hello, Ada!'));
+test('greets Grace', () => assert.equal(greet('Grace'), 'Hello, Grace!'));
+test('trims whitespace from a name', () => assert.equal(greet('  Ada  '), 'Hello, Ada!'));

@@ -10,5 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Allow time for the base-update exercise
+        run: sleep 90
       - name: Test the demo feature
         run: node --test nerilo-demo/*.test.cjs
